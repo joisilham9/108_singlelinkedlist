@@ -75,6 +75,9 @@ void addNode() {
 	bool deletenode(int nim) {
 		node* current = START;
 		node* previous = START;
+		if (serachNode(nim, previous, current) == false)
+			return false;
+		previous->next = current->next;
 		if (current == START)
 			START = current->next;
 		return true;
@@ -84,7 +87,18 @@ void addNode() {
 			return true;
 		else
 			return false;
+
 	}
+
+	void traverse() {
+		if (listEmpty()) {
+			cout << "list kosong" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
+
 
 
 
