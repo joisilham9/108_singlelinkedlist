@@ -97,8 +97,24 @@ void addNode() {
 			system("cls");
 			return;
 		}
+		else {
+			node* currentNode = START;
+			while (currentNode != NULL) {
+				cout << "Nim:" << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
+				currentNode = currentNode->next;
+			}
+		}
 	}
 
+	void searchData() {
+		if (listEmpty()) {
+			cout << "list kosong" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+		else
+	}
 
 
 
